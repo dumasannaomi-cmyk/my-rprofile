@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="retro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duma San Naomi ✦ Biodata</title>
+
+  <!-- DaisyUI v5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/daisyui.css" rel="stylesheet" type="text/css" />
+  <!-- Tailwind v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Boogaloo&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --pink:   #FF5FA0;
+      --green:  #52B04A;
+      --orange: #F05A28;
+      --yellow: #FFCB3C;
+      --cream:  #F5EDD6;
+      --purple: #6B3FA0;
+      --navy:   #1A1040;
+    }
+
+    body { font-family: 'Nunito', sans-serif; background: var(--cream); }
+    .groovy { font-family: 'Boogaloo', cursive !important; }
+
+    /* ── Override DaisyUI retro theme colors to match our groovy palette ── */
+    [data-theme="retro"] {
+      --color-primary: var(--purple);
+      --color-secondary: var(--pink);
+      --color-accent: var(--orange);
+      --color-neutral: var(--navy);
+      --color-base-100: var(--cream);
+      --color-base-200: #EDE4C5;
+      --color-base-300: #DDD3AF;
+      --color-base-content: var(--navy);
+      --radius-box: 1.2rem;
+      --radius-btn: 50px;
+    }
+
+    /* ── Groovy retro nav ── */
+    .groovy-navbar {
+      background: var(--pink);
+      border-bottom: 4px solid var(--navy);
+      position: sticky; top: 0; z-index: 100;
+    }
+
+    /* ── Hero stripe bg ── */
+    .hero-stripe {
+      background-color: var(--pink);
+      background-image:
+        repeating-linear-gradient(
+          135deg,
+          transparent 0px, transparent 30px,
+          rgba(255,255,255,0.08) 30px, rgba(255,255,255,0.08) 60px
+        );
+    }
+
+    /* ── Floating animations ── */
+    @keyframes floaty  { 0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(4deg)} }
+    @keyframes wiggle  { 0%,100%{transform:rotate(-5deg)}50%{transform:rotate(5deg)} }
+    @keyframes fadeUp  { from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)} }
+    @keyframes spinSun { from{transform:rotate(0)}to{transform:rotate(360deg)} }
+    @keyframes popIn   { from{opacity:0;transform:scale(.7)}to{opacity:1;transform:scale(1)} }
+
+    .floaty      { animation: floaty 3.5s ease-in-out infinite; }
+    .floaty-slow { animation: floaty 5s   ease-in-out infinite; }
+    .wiggle-anim { animation: wiggle 1.8s ease-in-out infinite; }
+    .spin-sun    { animation: spinSun 12s linear infinite; }
+
+    .fade-up { animation: fadeUp 0.65s ease forwards; }
+    .d1{animation-delay:.1s;opacity:0}.d2{animation-delay:.22s;opacity:0}
+    .d3{animation-delay:.34s;opacity:0}.d4{animation-delay:.46s;opacity:0}
+    .d5{animation-delay:.58s;opacity:0}.d6{animation-delay:.7s;opacity:0}
+
+    /* ── Shadow offset card trick ── */
+    .shadow-retro {
+      box-shadow: 5px 5px 0 var(--navy);
+      border: 3px solid var(--navy) !important;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .shadow-retro:hover {
+      box-shadow: 2px 2px 0 var(--navy);
+      transform: translate(2px,2px);
+    }
+
+    /* ── Wave dividers ── */
+    .wave { width:100%; overflow:hidden; line-height:0; display:block; }
+
+    /* ── Stats overrides ── */
+    .stat-retro { border: 3px solid var(--navy); border-radius: 16px; background: white; }
+
+    /* ── Rating stars color ── */
+    .rating-star { color: var(--yellow); }
+
+    /* ── Timeline custom colors ── */
+    .timeline-retro .timeline-box { border:2.5px solid var(--navy); }
+
+    footer { background: var(--navy); color: var(--cream); }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVBAR  (DaisyUI: navbar, menu, btn)
+═══════════════════════════════════════════ -->
+<div class="groovy-navbar">
+  <div class="navbar max-w-5xl mx-auto px-4">
+
+    <!-- Logo -->
+    <div class="navbar-start">
+      <span class="wiggle-anim inline-block text-2xl mr-2">⛸️</span>
+      <span class="groovy text-2xl font-bold" style="color:var(--navy)">Duma!</span>
+    </div>
+
+    <!-- Desktop menu -->
+    <div class="navbar-end hidden md:flex gap-2">
+      <a href="index.html" class="btn btn-sm shadow-retro" style="background:var(--yellow);color:var(--navy);">🏠 Beranda</a>
+      <a href="about.html" class="btn btn-sm shadow-retro" style="background:var(--cream);color:var(--navy);">✨ Tentang</a>
+    </div>
+
+    <!-- Mobile dropdown (DaisyUI dropdown) -->
+    <div class="navbar-end md:hidden">
+      <div class="dropdown dropdown-end">
+        <div tabindex="0" role="button" class="btn btn-sm" style="background:var(--navy);color:var(--yellow)">☰ Menu</div>
+        <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-10 w-44 p-2 shadow-lg border-2 border-[var(--navy)] mt-2">
+          <li><a href="index.html" class="font-bold">🏠 Beranda</a></li>
+          <li><a href="about.html" class="font-bold">✨ Tentang</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════
+     HERO  (DaisyUI: hero, badge, avatar)
+═══════════════════════════════════════════ -->
+<section class="hero-stripe pt-16 pb-0 relative overflow-hidden">
+
+  <!-- floating deco -->
+  <div class="floaty-slow absolute top-6 left-4 text-5xl select-none pointer-events-none">🌸</div>
+  <div class="floaty     absolute top-10 right-6 text-4xl select-none pointer-events-none">⭐</div>
+  <div class="floaty-slow absolute bottom-24 left-10 text-3xl select-none pointer-events-none opacity-70">🌻</div>
+
+  <div class="hero min-h-[78vh]">
+    <div class="hero-content flex-col md:flex-row-reverse gap-10 max-w-5xl mx-auto px-6 py-12">
+
+      <!-- Avatar (DaisyUI avatar) -->
+      <div class="fade-up d1">
+        <div class="floaty">
+          <div class="avatar avatar-placeholder">
+            <div class="shadow-retro w-48 md:w-64 rounded-full text-5xl font-black flex items-center justify-center"
+                 style="background:var(--cream);color:var(--purple);font-family:'Boogaloo',cursive;border-color:var(--navy);">
+              <span>DSN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="fade-up d2 max-w-lg">
+        <!-- DaisyUI badges -->
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="badge badge-lg shadow-retro" style="background:var(--navy);color:var(--yellow)">💻 Teknik Informatika</span>
+          <span class="badge badge-lg shadow-retro" style="background:var(--green);color:white">🎓 Univ. Brawijaya</span>
+        </div>
+
+        <h1 class="groovy leading-tight mb-3" style="font-size:clamp(2.8rem,7vw,5rem);color:var(--navy);">
+          Duma San Naomi
+        </h1>
+        <p class="groovy text-xl mb-6" style="color:var(--cream);">
+          ice skater ⛸️ &nbsp;·&nbsp; matcha lover 🍵 &nbsp;·&nbsp; mahasiswi 💻
+        </p>
+
+        <!-- DaisyUI buttons -->
+        <div class="flex flex-wrap gap-3">
+          <a href="about.html" class="btn shadow-retro groovy text-base" style="background:var(--yellow);color:var(--navy);">Lihat Biodata →</a>
+          <a href="#favorites" class="btn shadow-retro groovy text-base" style="background:var(--green);color:white;">Favorit Saya ❤️</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wave bottom -->
+  <svg class="wave" viewBox="0 0 1440 80" preserveAspectRatio="none" style="height:80px;">
+    <path d="M0,40 C200,80 400,0 600,40 C800,80 1000,10 1200,50 C1330,70 1400,30 1440,40 L1440,80 L0,80 Z" fill="#F5EDD6"/>
+  </svg>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     STATS  (DaisyUI: stat)
+═══════════════════════════════════════════ -->
+<section style="background:var(--cream);" class="py-14">
+  <div class="max-w-5xl mx-auto px-6">
+
+    <div class="text-center mb-10 fade-up d2">
+      <h2 class="groovy text-4xl" style="color:var(--navy)">📋 Siapa Duma? </h2>
+    </div>
+
+    <!-- DaisyUI stats -->
+    <div class="stats stats-vertical md:stats-horizontal shadow-retro w-full mb-10 fade-up d3"
+         style="border:3px solid var(--navy);background:white;border-radius:18px;">
+      <div class="stat">
+        <div class="stat-figure text-4xl">👤</div>
+        <div class="stat-title groovy text-base" style="color:var(--muted)">Nama</div>
+        <div class="stat-value groovy text-xl" style="color:var(--navy)">Duma San Naomi</div>
+      </div>
+      <div class="stat">
+        <div class="stat-figure text-4xl">🎫</div>
+        <div class="stat-title groovy text-base">NIM</div>
+        <div class="stat-value text-lg font-black" style="color:var(--purple);font-family:monospace;">245150207111096</div>
+      </div>
+      <div class="stat">
+        <div class="stat-figure text-4xl">🏛️</div>
+        <div class="stat-title groovy text-base">Universitas</div>
+        <div class="stat-value groovy text-xl" style="color:var(--navy)">Univ. Brawijaya</div>
+        <div class="stat-desc groovy text-sm font-bold" style="color:var(--orange)">Teknik Informatika</div>
+      </div>
+      <div class="stat">
+        <div class="stat-figure text-4xl">⛸️</div>
+        <div class="stat-title groovy text-base">Hobi Utama</div>
+        <div class="stat-value groovy text-xl" style="color:var(--navy)">Ice Skating</div>
+        <div class="stat-desc groovy text-sm font-bold" style="color:var(--green)">❄️ Passion sejati!</div>
+      </div>
+    </div>
+
+    <!-- DaisyUI cards - identitas cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 fade-up d4">
+
+      <!-- Card 1: Identitas -->
+      <div class="card shadow-retro" style="background:var(--yellow);">
+        <div class="card-body">
+          <h2 class="card-title groovy text-2xl" style="color:var(--navy)">👤 Identitas</h2>
+          <div class="space-y-2 text-sm font-bold" style="color:var(--navy)">
+            <p>📛 <strong>Duma San Naomi</strong></p>
+            <p>🎫 <code style="font-size:0.8rem;letter-spacing:1px;">245150207111096</code></p>
+            <p>🏛️ Universitas Brawijaya</p>
+            <p>💻 Teknik Informatika</p>
+          </div>
+          <div class="card-actions justify-end mt-3">
+            <a href="about.html" class="btn btn-sm shadow-retro groovy" style="background:var(--navy);color:var(--yellow)">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Hobi Ice Skating -->
+      <div class="card shadow-retro" style="background:var(--pink);">
+        <div class="card-body items-center text-center">
+          <div class="floaty text-7xl mb-2">⛸️</div>
+          <h2 class="card-title groovy text-2xl text-white">Ice Skating!</h2>
+          <p class="text-white text-sm leading-relaxed opacity-90">
+            Meluncur di atas es = ketenangan tertinggi. Setiap gerakan adalah cerita ❄️✨
+          </p>
+          <div class="card-actions mt-2 flex-wrap justify-center gap-1">
+            <span class="badge" style="background:white;color:var(--pink);">❄️ Rink</span>
+            <span class="badge" style="background:white;color:var(--pink);">🌟 Figure</span>
+            <span class="badge" style="background:white;color:var(--pink);">🎵 Dance</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Quick facts -->
+      <div class="card shadow-retro" style="background:var(--green);">
+        <div class="card-body">
+          <h2 class="card-title groovy text-2xl text-white">🎯 Quick Facts</h2>
+          <ul class="space-y-2 text-white font-bold text-sm">
+            <li>🍜 Mie Ayam = comfort food #1</li>
+            <li>🧋 Milk Tea paling the best!</li>
+            <li>🍵 Matcha = mood booster harian</li>
+            <li>💻 Coding + skating = hidup!</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Wave -->
+<svg class="wave" style="background:var(--cream);" viewBox="0 0 1440 80" preserveAspectRatio="none" style="height:80px;">
+  <path d="M0,20 C360,80 720,0 1080,55 C1250,78 1380,28 1440,20 L1440,80 L0,80 Z" fill="#52B04A"/>
+</svg>
+
+
+<!-- ═══════════════════════════════════════════
+     FAVORITES  (DaisyUI: card, rating, badge)
+═══════════════════════════════════════════ -->
+<section id="favorites" style="background:var(--green);" class="py-16 relative overflow-hidden">
+
+  <div class="floaty-slow absolute top-4 right-8 text-5xl select-none pointer-events-none">🌈</div>
+  <div class="floaty     absolute bottom-8 left-6 text-4xl select-none pointer-events-none">⭐</div>
+
+  <div class="max-w-5xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-10">
+      <h2 class="groovy text-4xl text-white">❤️ Favorit-Favorit Duma!</h2>
+      <p class="text-white opacity-80 mt-2 font-semibold">hal-hal yang bikin hari makin ceria 🌟</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+      <!-- Mie Ayam Card -->
+      <div class="card shadow-retro fade-up d3" style="background:var(--orange);">
+        <div class="card-body items-center text-center">
+          <div class="floaty text-7xl mb-1">🍜</div>
+          <h2 class="card-title groovy text-2xl text-white">Mie Ayam</h2>
+          <div class="badge text-xs font-black" style="background:white;color:var(--orange);">🍽️ MAKANAN FAVORIT</div>
+          <p class="text-white text-sm leading-relaxed opacity-90 mt-2">
+            Semangkuk mie ayam hangat bisa bikin hari yang berat jadi ringan. Ini bukan makanan, ini <strong>terapi!</strong> 😂
+          </p>
+          <!-- DaisyUI rating -->
+          <div class="rating rating-sm mt-3">
+            <input type="radio" class="mask mask-star-2 bg-yellow-300" disabled />
+            <input type="radio" class="mask mask-star-2 bg-yellow-300" disabled />
+            <input type="radio" class="mask mask-star-2 bg-yellow-300" disabled />
+            <input type="radio" class="mask mask-star-2 bg-yellow-300" disabled />
+            <input type="radio" class="mask mask-star-2 bg-yellow-300" disabled checked />
+          </div>
+          <p class="text-white text-xs opacity-70">5/5 — Sempurna!</p>
+        </div>
+      </div>
+
+      <!-- Milk Tea Card -->
+      <div class="card shadow-retro fade-up d4" style="background:var(--navy);">
+        <div class="card-body items-center text-center">
+          <div class="floaty text-7xl mb-1">🧋</div>
+          <h2 class="card-title groovy text-2xl" style="color:var(--yellow)">Milk Tea</h2>
+          <div class="badge text-xs font-black" style="background:var(--yellow);color:var(--navy);">☕ MINUMAN FAVORIT #1</div>
+          <p class="text-sm leading-relaxed opacity-80 mt-2" style="color:var(--cream)">
+            Milk tea dengan boba adalah kombinasi sempurna. Manis, kenyal, dan selalu bikin senyum! Boba atau tidak tetap enak 🧋
+          </p>
+          <!-- DaisyUI rating -->
+          <div class="rating rating-sm mt-3">
+            <input type="radio" class="mask mask-star-2 bg-yellow-400" disabled />
+            <input type="radio" class="mask mask-star-2 bg-yellow-400" disabled />
+            <input type="radio" class="mask mask-star-2 bg-yellow-400" disabled />
+            <input type="radio" class="mask mask-star-2 bg-yellow-400" disabled />
+            <input type="radio" class="mask mask-star-2 bg-yellow-400" disabled checked />
+          </div>
+          <p class="text-xs opacity-50 mt-1" style="color:var(--cream)">5/5 — Wajib tiap hari!</p>
+        </div>
+      </div>
+
+      <!-- Matcha Card -->
+      <div class="card shadow-retro fade-up d5" style="background:var(--yellow);">
+        <div class="card-body items-center text-center">
+          <div class="floaty text-7xl mb-1">🍵</div>
+          <h2 class="card-title groovy text-2xl" style="color:var(--navy)">Matcha</h2>
+          <div class="badge text-xs font-black" style="background:var(--navy);color:var(--yellow);">🌿 MINUMAN FAVORIT #2</div>
+          <p class="text-sm leading-relaxed mt-2" style="color:var(--navy);opacity:0.85">
+            Matcha latte di pagi hari = ritual wajib! Rasa earthy yang menenangkan jiwa & raga. Bikin fokus belajar coding jadi lebih produktif 🌱
+          </p>
+          <!-- DaisyUI rating -->
+          <div class="rating rating-sm mt-3">
+            <input type="radio" class="mask mask-star-2 bg-green-500" disabled />
+            <input type="radio" class="mask mask-star-2 bg-green-500" disabled />
+            <input type="radio" class="mask mask-star-2 bg-green-500" disabled />
+            <input type="radio" class="mask mask-star-2 bg-green-500" disabled />
+            <input type="radio" class="mask mask-star-2 bg-green-500" disabled checked />
+          </div>
+          <p class="text-xs mt-1" style="color:var(--navy);opacity:0.6">5/5 — Ritual pagi wajib!</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Wave -->
+<svg class="wave" style="background:var(--green);" viewBox="0 0 1440 80" preserveAspectRatio="none" style="height:80px;">
+  <path d="M0,30 C300,80 600,0 900,50 C1100,80 1300,20 1440,40 L1440,80 L0,80 Z" fill="#F5EDD6"/>
+</svg>
+
+
+<!-- ═══════════════════════════════════════════
+     ACCORDION / COLLAPSE  (DaisyUI: collapse)
+═══════════════════════════════════════════ -->
+<section style="background:var(--cream);" class="py-14">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <h2 class="groovy text-4xl" style="color:var(--navy)">🙋 FAQ tentang Duma!</h2>
+      <p class="text-sm mt-2 font-semibold" style="color:var(--purple)">klik buat buka jawabannya 👇</p>
+    </div>
+
+    <div class="space-y-4 max-w-2xl mx-auto">
+
+      <!-- DaisyUI collapse (accordion) -->
+      <div class="collapse collapse-arrow shadow-retro" style="background:var(--yellow);">
+        <input type="radio" name="faq" defaultChecked />
+        <div class="collapse-title groovy text-xl" style="color:var(--navy)">
+          ⛸️ Kenapa suka banget ice skating?
+        </div>
+        <div class="collapse-content text-sm font-semibold" style="color:var(--navy)">
+          <p class="pt-2 leading-relaxed">
+            Karena di atas rink, semua kekhawatiran hilang! Ada ketenangan dan kebebasan luar biasa saat meluncur. Ice skating ngajarin Duma soal ketekunan — sama kayak belajar coding, awalnya susah tapi makin lama makin lancar 🌟
+          </p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow shadow-retro" style="background:var(--pink);">
+        <input type="radio" name="faq" />
+        <div class="collapse-title groovy text-xl text-white">
+          🍜 Mie ayam atau nasi goreng?
+        </div>
+        <div class="collapse-content text-sm font-semibold text-white">
+          <p class="pt-2 leading-relaxed">
+            MIE AYAM. Ini bukan pertanyaan, ini sudah takdir 😂 Semangkuk mie ayam hangat dengan kuah gurih dan ayam cincang adalah comfort food nomor satu sepanjang masa. Nasi goreng? Enaknya kalau mie ayam lagi tutup 🍳
+          </p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow shadow-retro" style="background:var(--green);">
+        <input type="radio" name="faq" />
+        <div class="collapse-title groovy text-xl text-white">
+          🍵 Pilih matcha atau milk tea?
+        </div>
+        <div class="collapse-content text-sm font-semibold text-white">
+          <p class="pt-2 leading-relaxed">
+            Kenapa harus milih? 😄 Duma punya jadwal: Matcha latte di pagi hari untuk semangat belajar & fokus, milk tea di sore hari untuk relaksasi setelah kuliah. Keduanya essential dan tidak bisa digantikan!
+          </p>
+        </div>
+      </div>
+
+      <div class="collapse collapse-arrow shadow-retro" style="background:var(--purple);">
+        <input type="radio" name="faq" />
+        <div class="collapse-title groovy text-xl text-white">
+          💻 Kenapa pilih Teknik Informatika?
+        </div>
+        <div class="collapse-content text-sm font-semibold text-white">
+          <p class="pt-2 leading-relaxed">
+            Karena teknologi itu keren! TI di Universitas Brawijaya membuka banyak kesempatan — dari bikin aplikasi, belajar AI, sampai web development. Plus, ternyata problem solving di coding itu mirip banget sama latihan ice skating: perlu sabar, latihan berulang, dan tidak takut jatuh 🚀
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Wave -->
+<svg class="wave" style="background:var(--cream);" viewBox="0 0 1440 80" preserveAspectRatio="none" style="height:80px;">
+  <path d="M0,50 C200,10 400,70 600,30 C800,0 1000,70 1200,35 C1330,15 1400,55 1440,50 L1440,80 L0,80 Z" fill="#6B3FA0"/>
+</svg>
+
+
+<!-- ═══════════════════════════════════════════
+     QUOTE + CTA  (DaisyUI: alert, btn)
+═══════════════════════════════════════════ -->
+<section style="background:var(--purple);" class="py-16 relative overflow-hidden">
+
+  <div class="spin-sun absolute top-6 right-10 text-5xl select-none pointer-events-none">☀️</div>
+  <div class="floaty-slow absolute bottom-6 left-8 text-4xl select-none pointer-events-none">🌸</div>
+
+  <div class="max-w-5xl mx-auto px-6 relative z-10">
+
+    <!-- DaisyUI alert as quote box -->
+    <div class="alert shadow-retro mb-10" style="background:rgba(255,255,255,0.12);border-color:var(--yellow);border-width:3px;border-radius:20px;">
+      <span class="text-5xl">💬</span>
+      <div>
+        <p class="groovy text-xl md:text-2xl text-white leading-relaxed">
+          "Belajar itu kayak ice skating — awalnya jatuh-jatuh, tapi lama-lama bisa meluncur kenceng!"
+        </p>
+        <p class="font-bold text-sm mt-2" style="color:var(--yellow)">— Duma San Naomi · Teknik Informatika UB 🎓</p>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center">
+      <p class="groovy text-2xl text-white mb-6">mau tau lebih lengkap tentang Duma? 👀</p>
+      <a href="about.html" class="btn btn-lg shadow-retro groovy text-lg" style="background:var(--yellow);color:var(--navy);">
+        Kunjungi Halaman Tentang →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer class="py-8">
+  <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex items-center gap-2">
+      <span class="wiggle-anim inline-block">⛸️</span>
+      <span class="groovy text-xl" style="color:var(--yellow)">Duma San Naomi</span>
+    </div>
+    <p class="text-xs opacity-50 uppercase tracking-widest text-center">NIM: 245150207111096 · TI · Univ. Brawijaya · 2025</p>
+    <div class="flex gap-3">
+      <a href="index.html" class="btn btn-xs shadow-retro" style="background:transparent;color:var(--yellow);border-color:var(--yellow);">Beranda</a>
+      <a href="about.html" class="btn btn-xs shadow-retro" style="background:transparent;color:var(--yellow);border-color:var(--yellow);">Tentang</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
